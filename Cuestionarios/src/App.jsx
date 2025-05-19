@@ -16,9 +16,12 @@ function App() {
     <Routes>
       <Route path="/*" element={<Navigate replace to="/login" />} />
       <Route path="/login" element={<LoginPage nuevoUsuario={setUsuario} />} />
-      {usuario !== null && <><Route path="/cuestionarios" element={<CuestionariosPage />} />
-      <Route path="/cuestionarios/:idCuestionario" element={<ListaPreguntasPage />} />
-      <Route path="/cuestionarios/:idCuestionario/:idPregunta" element={<PreguntaPage />} /> </>}
+      {!!usuario && 
+        <>
+          <Route path="/cuestionarios" element={<CuestionariosPage />} />
+          <Route path="/cuestionarios/:idCuestionario" element={<ListaPreguntasPage />} />
+          <Route path="/cuestionarios/:idCuestionario/:idPregunta" element={<PreguntaPage />} />
+        </>}
     </Routes>
   );
 }
