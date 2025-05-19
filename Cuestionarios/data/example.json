@@ -76,13 +76,13 @@
         },
         {
             "id": "2",
-            "idPregunta": "2",
+            "idPregunta": "1",
             "tipo": "Texto",
             "descripcion": "Nombre y razones para ser tu película favorita"
         },
         {
             "id": "3",
-            "idPregunta": "3",
+            "idPregunta": "1",
             "tipo": "Texto",
             "descripcion": "Nombre y razones para ser tu libro favorito"
         }

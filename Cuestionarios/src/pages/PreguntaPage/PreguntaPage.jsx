@@ -6,6 +6,7 @@ import "./PreguntaPage.css"
 function PreguntaPage() {
 
     const params = useParams();
+    const [seleccion, setSeleccion] = useState("");
 
     const [pregunta, setPregunta] = useState(null);
 
@@ -13,7 +14,7 @@ function PreguntaPage() {
         // Fetch the product details using async/await
         const fetchQs = async () => {
             try {
-                const url = `http://localhost:3000/detallesPreguntas/${params.idCuestionario}/${params.idPregunta}`;
+                const url = `http://localhost:3000/detallePregunta?idPregunta=${params.idPregunta}`;
                 const res = await fetch(url);
                 const data = await res.json();
                 setPregunta(data);
@@ -30,15 +31,26 @@ function PreguntaPage() {
 
     // We want to render the product details 👇
     return (<div className="pregunta">
-        <h2>{pregunta.nombre}</h2>
-        <h1></h1>
-        {
+            <h2>Nombre de la pregunta</h2>
 
-            pregunta.map((pregunta) => (
-                <Link to={"cuestionarios/" + params.idCuestionario + "/" + pregunta.id}> {pregunta.titulo} </Link>
-            ))
-        }
-    </div>
+            {pregunta[0].tipo === "MO" ? (
+                Object.entries(pregunta[0].opciones || {}).map(([clave, valor]) => (
+                    <label key={clave}>
+                        <input
+                            type="radio"
+                            name="opcion"
+                            value={clave}
+                            checked={seleccion === clave}
+                            onChange={(e) => setSeleccion(e.target.value)}
+                        />
+                        {clave}: {valor}
+                    </label>
+                ))
+            ) : (
+                <textarea name="respuesta" id="respuesta"></textarea>
+            )}
+            <button>Enter</button>
+        </div>
     );
 }
 
