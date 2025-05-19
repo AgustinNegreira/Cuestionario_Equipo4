@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ListaPreguntasPage.css"
 
-function ListaPreguntasPage() {
+function ListaPreguntasPage({}) {
 
     const params = useParams();
 
@@ -14,7 +14,7 @@ function ListaPreguntasPage() {
         // Fetch the product details using async/await
         const fetchQs = async () => {
             try {
-                const url = `http://localhost:3000/preguntas/${params.idCuestionario}`;
+                const url = `http://localhost:3000/preguntas?idCuestionario=${params.idCuestionario}`;
                 const res = await fetch(url);
                 const data = await res.json();
                 setPreguntas(data);
@@ -31,9 +31,9 @@ function ListaPreguntasPage() {
 
     // We want to render the product details 👇
     return (<div className="preguntas">
-        <h1>{preguntas.nombre}</h1>
+        <h1>Nombre del cuestionario</h1>
         {
-            preguntas.preguntas.map((pregunta) => (
+            preguntas.map((pregunta) => (
                 <Link key={"c" + params.idCuestionario + "p" + pregunta.id} to={"/cuestionarios/" + params.idCuestionario + "/" + pregunta.id}> {pregunta.titulo} </Link>
             ))
         }
