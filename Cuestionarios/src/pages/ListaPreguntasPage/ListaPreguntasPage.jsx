@@ -34,7 +34,7 @@ function ListaPreguntasPage() {
         <h1>{preguntas.nombre}</h1>
         {
             preguntas.preguntas.map((pregunta) => (
-                <Link key={"c" + params.idCuestionario + "p" + pregunta.id} to={"/" + params.idCuestionario + "/" + pregunta.id}> {pregunta.titulo} </Link>
+                <Link key={"c" + params.idCuestionario + "p" + pregunta.id} to={"/cuestionarios/" + params.idCuestionario + "/" + pregunta.id}> {pregunta.titulo} </Link>
             ))
         }
     </div>

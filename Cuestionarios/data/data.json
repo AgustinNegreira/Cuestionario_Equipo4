@@ -19,87 +19,72 @@
     "preguntas": [
         {
             "id": "1",
-            "nombre": "Favoritos",
-            "preguntas": [
-                {
-                    "id": "1",
-                    "titulo": "Helados"
-                },
-                {
-                    "id": "2",
-                    "titulo": "Películas"
-                },
-                {
-                    "id": "3",
-                    "titulo": "Libros"
-                }
-            ]
+            "idCuestionario": "1",
+            "titulo": "Helados"
         },
         {
             "id": "2",
-            "nombre": "Películas",
-            "preguntas": [
-                {
-                    "id": "1",
-                    "titulo": "Última que viste"
-                },
-                {
-                    "id": "2",
-                    "titulo": "Favoríta"
-                },
-                {
-                    "id": "3",
-                    "titulo": "Menos favorita"
-                }
-            ]
+            "idCuestionario": "1",
+            "titulo": "Películas"
         },
         {
             "id": "3",
-            "nombre": "Disney",
-            "preguntas": [
-                {
-                    "id": "1",
-                    "titulo": "Personaje favorito"
-                },
-                {
-                    "id": "2",
-                    "titulo": "Pelicula favorita"
-                },
-                {
-                    "id": "3",
-                    "titulo": "Primeros recuerdos"
-                }
-            ]
+            "idCuestionario": "1",
+            "titulo": "Libros"
+        },
+        {
+            "id": "4",
+            "idCuestionario": "2",
+            "titulo": "Última que viste"
+        },
+        {
+            "id": "5",
+            "idCuestionario": "2",
+            "titulo": "Favoríta"
+        },
+        {
+            "id": "6",
+            "idCuestionario": "2",
+            "titulo": "Menos favorita"
+        },
+        {
+            "id": "7",
+            "idCuestionario": "3",
+            "titulo": "Personaje favorito"
+        },
+        {
+            "id": "8",
+            "idCuestionario": "3",
+            "titulo": "Pelicula favorita"
+        },
+        {
+            "id": "9",
+            "idCuestionario": "3",
+            "titulo": "Primeros recuerdos"
         }
     ],
     "detallePregunta": [
         {
             "id": "1",
-            "nombre": "Favoritos",
-            "preguntas": [
-                {
-                    "id": "1",
-                    "titulo": "Helados",
-                    "tipo": "MO",
-                    "opciones": {
-                        "opcion1": "Chocolate",
-                        "opcion2": "Frutilla",
-                        "opcion3":  "Vainilla"
-                    }
-                },
-                {
-                    "id": "2",
-                    "titulo": "Películas",
-                    "tipo": "Texto",
-                    "descripcion":"Nombre y razones para ser tu película favorita"
-                },
-                {
-                    "id": "3",
-                    "titulo": "Libros",
-                    "tipo": "Texto",
-                    "descripcion":"Nombre y razones para ser tu libro favorito"
-                }
-            ]
+            "idPregunta": "1",
+            "tipo": "MO",
+            "opciones": {
+                "opcion1": "Chocolate",
+                "opcion2": "Frutilla",
+                "opcion3": "Vainilla"
+            }
+        },
+        {
+            "id": "2",
+            "idPregunta": "1",
+            "tipo": "Texto",
+            "descripcion": "Nombre y razones para ser tu película favorita"
+        },
+        {
+            "id": "3",
+            "idPregunta": "1",
+            "tipo": "Texto",
+            "descripcion": "Nombre y razones para ser tu libro favorito"
         }
     ]
 }
